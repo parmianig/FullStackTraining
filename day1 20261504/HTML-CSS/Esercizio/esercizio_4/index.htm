@@ -220,11 +220,59 @@
             box-shadow: none;
         }
 
+        .post-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .testo-giustificato {
+            text-align: justify;
+            color: #333;
+        }
+
+        .testo-evidenziato {
+            background-color: coral;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            margin: 20px 20px;
+        }
+
+        .box-bottoni {
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 10px 10px 20px 20px;
+            background-color: blue;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
     </style>
 
 </head>
 
 <body>
+    <div class="post-container">
+    <h1 class="titolo-principale">Il mio viaggio in Giappone</h1>
+    
+    <p class="testo-giustificato">
+        Questo è un paragrafo normale. Vogliamo che il testo sia distribuito bene su tutta la riga, 
+        quindi useremo il giustificato per renderlo simile a una pagina di un libro.
+    </p>
+
+    <p class="testo-evidenziato">
+        "In precedenza, non avrei mai immaginato di vedere i ciliegi in fiore a Tokyo."
+    </p>
+
+    <div class="box-bottoni">
+        <button class="btn">Like</button>
+        <button class="btn">Condividi</button>
+        <button class="btn">Commenta</button>
+    </div>
+    </div>
 
     <div class="container">
         <img src="../IMG/LucaVerdi.jfif" alt="loghi">
