@@ -19,7 +19,7 @@ div {
 
 .container-vertical {
     display: flex;
-    salign-content: baseline;
+    align-content: baseline;
     padding: 0;
     flex-wrap: wrap;
     flex-direction: column;
