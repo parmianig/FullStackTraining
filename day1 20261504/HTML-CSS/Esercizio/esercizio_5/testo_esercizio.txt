@@ -1,0 +1,125 @@
+Immagina di voler creare l'interfaccia per il tuo sistema di Machine Learning: 
+avrai bisogno di una barra laterale per i comandi e di un'area centrale per i dati.
+
+
+
+/* 1. RESET BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* 2. IL WRAPPER PRINCIPALE 
+   Vogliamo che Sidebar e Main siano uno a fianco all'altro */
+.dashboard-wrapper {
+    ……………..../* Attiva Flex: i figli (sidebar e main) si mettono in riga */
+    height: 100vh;         /* Prende tutta l'altezza dello schermo */
+}
+
+/* 3. LA SIDEBAR 
+   Vogliamo che gli elementi all'interno siano uno sotto l'altro */
+.sidebar {
+    width: 200px;
+    background-color: #1a1a2e;
+    color: white;
+    padding: 20px;
+    
+     …………..  /* Anche la sidebar diventa un contenitore Flex */
+    ………….. /* Allinea i figli (menu-item) in verticale */
+    gap: 15px;             /* Crea spazio uniforme tra i link del menu */
+}
+
+/* 4. IL CONTENUTO PRINCIPALE 
+   Deve occupare tutto lo spazio che avanza */
+.main-content {
+    flex-grow: 1;          /* IMPORTANTE: Dice a questo div di espandersi e occupare tutto il resto dello spazio */
+    background-color: #f0f2f5;
+    padding: 25px;
+    display: flex;
+    …………. /* Organizza Header e Cards dall'alto in basso usando column*/
+    gap: 30px;
+}
+
+/* 5. L'HEADER 
+   Vogliamo il titolo a sinistra e il profilo a destra */
+.header-top {
+    display: flex;
+    ……………../* Spinge i figli ai due estremi opposti */
+    …………... /* Allinea verticalmente titolo e badge al centro */
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* 6. LA GRIGLIA DELLE CARDS 
+   Qui vediamo la vera potenza della distribuzione spaziale */
+.stats-grid {
+    display: flex;
+    ……………….       /* Se lo schermo è stretto, le card vanno a capo */
+    gap: 20px;             /* Spazio tra le card */
+}
+
+/* 7. LA SINGOLA CARD 
+   Vogliamo che siano tutte uguali e flessibili */
+.card {
+    flex: 1;               /* Ogni card cresce allo stesso modo per occupare la riga */
+    min-width: 200px;      /* Impedisce alle card di diventare troppo strette */
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #4e73df; /* Un tocco di stile */
+    
+    display: flex;
+    …………….. /* Testo sopra, numero sotto */
+    justify-content: center;
+}
+
+.card strong {
+    font-size: 24px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.user-badge {
+    background: #4e73df;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+
+<div class="dashboard-wrapper">
+
+    <nav class="sidebar">
+        <h2>AI Student Lab</h2>
+        <div class="menu-item">Dashboard</div>
+        <div class="menu-item">Database</div>
+        <div class="menu-item">ML Analysis</div>
+    </nav>
+
+    <main class="main-content">
+        
+        <header class="header-top">
+            <h1>Analisi Predittiva</h1>
+            <div class="user-badge">Admin</div>
+        </header>
+
+        <section class="stats-grid">
+            <div class="card">
+                <span>Studenti Promossi</span>
+                <strong>85%</strong>
+            </div>
+            <div class="card">
+                <span>Media Globale</span>
+                <strong>24.5</strong>
+            </div>
+            <div class="card">
+                <span>Errori ML</span>
+                <strong>0.02</strong>
+            </div>
+        </section>
+
+    </main>
+</div>

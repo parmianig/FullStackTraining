@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.dashboard-wrapper {
+    display: flex; /* Attiva Flex: i figli (sidebar e main) si mettono in riga */
+    height: 100vh; /* Prende tutta l'altezza dello schermo */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #1a1a2e;
+    color: white;
+    padding: 20px;
+    display: flex; /* Anche la sidebar diventa un contenitore Flex */
+    flex-direction: column; /* Allinea i figli (menu-item) in verticale */
+    gap: 15px;             /* Crea spazio uniforme tra i link del menu */
+}
+
+.main-content {
+    flex-grow: 1; /* IMPORTANTE: Dice a questo div di espandersi e occupare tutto il resto dello spazio */
+    background-color: #f0f2f5;
+    padding: 25px;
+    display: flex;
+    flex-direction: column; /* Organizza Header e Cards dall'alto in basso usando column*/
+    gap: 30px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between; /* Spinge i figli ai due estremi opposti */
+    align-items: center; /* Allinea verticalmente titolo e badge al centro */
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap; /* Se lo schermo è stretto, le card vanno a capo */
+    gap: 20px;       /* Spazio tra le card */
+}
+
+.card {
+    flex: 1;               /* Ogni card cresce allo stesso modo per occupare la riga */
+    min-width: 200px;      /* Impedisce alle card di diventare troppo strette */
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 5px solid #4e73df; /* Un tocco di stile */
+    display: flex;
+    flex-direction: column; /* Testo sopra, numero sotto */
+    justify-content: center;
+    align-items: center;
+}
+
+.card strong {
+    font-size: 24px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.user-badge {
+    background: #4e73df;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
