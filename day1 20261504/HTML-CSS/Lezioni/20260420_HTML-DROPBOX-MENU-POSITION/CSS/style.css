@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    list-style-type: none;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -23,13 +23,15 @@
 
 .nav-list {
     display: flex;
-    list-style-type: none;
+    list-style: none;
+    gap: 20px;
 }
 
 .nav-list a {
     color: white;
     text-decoration: none;
     padding: 10px;
+    display: block;
 }
 
 .nav-list a:hover {
@@ -39,13 +41,15 @@
 
 .nav-list li {
     margin: 0 15px;
+    position: relative;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 150px;
     top: 100%;
+    left: 0;
+    min-width: 150px;
     background-color: black;
 }
 
