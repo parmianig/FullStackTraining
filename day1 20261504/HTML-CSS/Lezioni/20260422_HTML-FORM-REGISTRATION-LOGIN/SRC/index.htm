@@ -34,27 +34,28 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="eta">Età:</label>
+                    <label for="eta">Età</label>
                     <input type="number" name="eta" id="eta" min="18" max="90" placeholder="Inserisci la tua età">
                 </div>
 
                 <div class="form-group">
-                    <label for="data-nascita">Data di Nascita:</label>
+                    <label for="data-nascita">Data di Nascita</label>
                     <input type="date" name="data-nascita" id="data-nascita">
                 </div>
 
                 <fieldset class="form-group">
                     <legend>Sesso:</legend>
+                    <div class="radio-group">
+                        <label class="radio-button">
+                            <input type="radio" name="sesso" id="maschio" value="maschio">
+                            Maschio
+                        </label>
 
-                    <label class="radio-button">
-                        <input type="radio" name="sesso" id="maschio" value="maschio">
-                        Maschio
-                    </label>
-
-                    <label class="radio-button">
-                        <input type="radio" name="sesso" id="femmina" value="femmina">
-                        Femmina
-                    </label>
+                        <label class="radio-button">
+                            <input type="radio" name="sesso" id="femmina" value="femmina">
+                            Femmina
+                        </label>
+                    </div>
                 </fieldset>
 
                 <div class="form-group">
@@ -72,12 +73,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="file-mix">Inserisci un file Mix:</label>
+                    <label for="file-mix">Inserisci un file Mix</label>
                     <input type="file" name="file-mix" id="file-mix" accept=".mix">
                 </div>
 
                 <div class="form-group">
-                    <label for="file-pdf">Inserisci un file PDF o DOCX:</label>
+                    <label for="file-pdf">Inserisci un file PDF o DOCX</label>
                     <input type="file" name="file-pdf" id="file-pdf" accept=".pdf,.docx">
                 </div>
 
@@ -88,15 +89,16 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Solo lettura:</label>
-                    <input type="text" name="solo-lettura" id="solo-lettura" placeholder="Campo di sola lettura" readonly>
+                    <label>Solo lettura</label>
+                    <input type="text" name="solo-lettura" id="solo-lettura" placeholder="Campo di sola lettura"
+                        readonly>
                 </div>
 
                 <div class="form-group">
                     <label>Disabilitato</label>
                     <input type="text" name="disabilitato" id="disabilitato" placeholder="Campo disabilitato" disabled>
                 </div>
-                
+
                 <div class="form-group">
                     <input type="checkbox" name="termini" id="termini">
                     <label for="termini">Accetto i termini e le condizioni</label>
@@ -105,8 +107,10 @@
 
                 <input type="hidden" name="nascosto" id="nascosto" value="1">
 
-                <button type="reset">Reset</button>
-                <button type="submit">Invia</button>
+                <div class="form-actions">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Invia</button>
+                </div>
             </form>
 
         </div>
