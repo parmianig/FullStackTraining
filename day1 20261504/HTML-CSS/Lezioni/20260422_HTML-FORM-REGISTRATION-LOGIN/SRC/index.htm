@@ -29,6 +29,11 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="ripeti-password">Ripeti Password</label>
+                    <input type="password" name="ripeti-password" id="ripeti-password" placeholder="Inserisci nuovamente la password">
+                </div>
+
+                <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="Inserisci la tua email">
                 </div>
@@ -43,8 +48,8 @@
                     <input type="date" name="data-nascita" id="data-nascita">
                 </div>
 
-                <fieldset class="form-group">
-                    <legend>Sesso:</legend>
+                <fieldset class="form-group radio-fieldset">
+                    <label class="radio-title">Sesso</label>
                     <div class="radio-group">
                         <label class="radio-button">
                             <input type="radio" name="sesso" id="maschio" value="maschio">
@@ -99,10 +104,11 @@
                     <input type="text" name="disabilitato" id="disabilitato" placeholder="Campo disabilitato" disabled>
                 </div>
 
-                <div class="form-group">
-                    <input type="checkbox" name="termini" id="termini">
-                    <label for="termini">Accetto i termini e le condizioni</label>
-                    <a href="#condizioni">Leggi le condizioni</a>
+                <div class="form-group consent-group">
+                    <label class="consent-inline" for="termini">
+                        <span>Accetto i <a href="#terminicondizioni">termini e le condizioni</a></span>
+                    </label>
+                    <input type="checkbox" id="termini" name="termini">
                 </div>
 
                 <input type="hidden" name="nascosto" id="nascosto" value="1">
