@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="./index.htm">
+                <img src="../../../IMG/restaurant.ico" alt="logo" width="50px">
+            </a>
+
+            <div class="nav-container">
+                <ul class="nav-list">
+                    <li><a href="./index.htm">Home</a></li>
+                    <li><a href="./contattaci.htm">Contattaci</a></li>
+                    <li class="dropdown">
+                        <a href="#">Servizi</a>
+                        <div class="dropdown-content">
+                            <li><a href="#">Riparazione</a></li>
+                            <li><a href="#">Sviluppo</a></li>
+                            <li><a href="#">Progettazione</a></li>
+                        </div>
+                    </li>
+                    <li><a href="./chi_siamo.htm">Chi siamo</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+    </header>
+    <main>
+        <div class="main-container">
+            <h2>contattaci</h2>
+            <h3>Compila i campi, invia il form e ti contatteremo al più presto</h3>
+
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome*:</label>
+                    <input type="text" name="nome" id="nome" required placeholder="Inserisci il tuo nome">
+                </div>
+                <div class="form-group">
+                    <label for="cognome">Cognome*:</label>
+                    <input type="text" name="cognome" id="cognome" required placeholder="Inserisci il tuo cognome">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*:</label>
+                    <input type="email" name="email" id="email" required placeholder="Inserisci la tua email">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Telefono*:</label>
+                    <input type="tel" name="telefono" id="telefono" required placeholder="Inserisci il tuo telefono">                    
+                </div>
+
+                <div class="form-group">
+                    <label for="messaggio">Messaggio*:</label>
+                    <textarea name="messaggio" id="messaggio" cols="30" rows="10" placeholder="Scrivi il tuo messaggio..." required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Invia</button>
+                </div>
+            </form>
+    </main>
+    <footer>
+        <p>&copy; 2026 - Tutti i diritti sono riservati</p>
+        <a href="mailto:esempio@test.it" target="_blank">email@example.com</a>
+    </footer>
+</body>
+
+</html>
