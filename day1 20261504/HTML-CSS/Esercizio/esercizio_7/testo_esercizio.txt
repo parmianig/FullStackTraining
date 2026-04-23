@@ -1,0 +1,83 @@
+creare una pagina che mostri le statistiche generali di una classe e la lista degli studenti.
+
+1. La Struttura HTML
+Dovrai dividere la pagina in tre sezioni principali:
+
+(Sinistra): Menu di navigazione con link come "Home", "Studenti", "Report".
+
+(Alto): profilo utente.
+
+section (Centro): * Cards Statistiche: Tre piccoli box che mostrano "Media Classe", "Studenti Totali", "Esami Superati".
+
+HTML:
+
+<section class="stats-container">
+  <div class="card">
+    <h3>Media Voti</h3>
+    <p class="number">28.5</p>
+  </div>
+  <div class="card">
+    <h3>Studenti</h3>
+    <p class="number">24</p>
+  </div>
+  <div class="card">
+    <h3>Promossi</h3>
+    <p class="number">92%</p>
+  </div>
+</section>
+
+CSS:
+
+.stats-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1; /* Fa sì che tutte le card abbiano la stessa larghezza */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+Tabella Dati: Una lista con Nome, Materia e Voto.
+
+2. Lo Stile CSS 
+Per creare la dashboard concentrati su questi punti:
+
+Il Contenitore Principale: Usa display: flex; sul body per affiancare la Sidebar al contenuto principale.
+
+Le Cards: Usa display: flex; e justify-content: space-around; per distribuire i box delle statistiche. Dai loro un border-radius: 12px; e un'ombra leggera (box-shadow) per farle sembrare moderne.
+
+Colori: Usa una base scura per la sidebar (es: #2c3e50) e un fondo chiaro per l'area dati (#f4f7f6).
+
+La Tabella: Rendi la tabella elegante con border-collapse: collapse; e aggiungi un colore diverso alle righe pari (nth-child(even)) per migliorarne la leggibilità.
+
+
+###############################################
+
+Es: Cards
+1.Strutturare il file HTML
+Creare una struttura di base con <!DOCTYPE html>, <html>, <head> e <body>.
+Impostare il titolo della pagina nel tag <title>.
+Collegare il foglio di stile interno usando <style>.
+
+2.Aggiungere il titolo principale (h1)
+Posizionarlo in alto e fissarlo (position: fixed;).
+Impostare larghezza al 100% e un'ombra per evidenziarlo.
+
+3.Creare il contenitore principale (.container)
+Usare Flex per allineare le card in riga e con spaziatura.
+Impostare max-width: 1200px per evitare che il layout si allarghi troppo su schermi grandi.
+Consentire il wrap in modo che le card vadano a capo se lo schermo è stretto.
+
+4.Creare le card (.card)
+Aggiungere un box con sfondo bianco, bordo arrotondato e ombra.
+Inserire:
+Un'immagine (<img> con max-width: 100% per renderla responsiva).
+Un titolo (<h3>) con nome della card.
+Un testo descrittivo (<p>).
+Un Bottone
