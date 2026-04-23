@@ -1,0 +1,72 @@
+Questa volta creiamo qualcosa di più "strutturato": una Pagina Recensione di un Videogioco o di un Film.
+
+In questo esercizio ci concentreremo molto sulla gestione degli spazi (quindi margin, padding e display: block) per dare ordine alla pagina.
+
+[√] Esercizio: La Recensione di "Super Adventure"
+Creare una pagina che sembri un articolo di un blog specializzato.
+
+Fase 1: La Struttura (HTML)
+[√] Titolo dell'Articolo: Usa un <h1> per il nome del gioco/film.
+
+[√] Voto Rapido: Usa un <h3> con scritto "Voto: 9/10".
+
+[√] Immagine di Copertina: Inserisci una bella immagine grande.
+
+[√] Introduzione: Usa un <p> per descrivere la trama. All'interno, usa <span> con uno stile in linea per evidenziare il nome del protagonista con un colore diverso.
+
+[√] Dettagli Tecnici: Usa il tag <pre> per elencare i requisiti di sistema o il cast, mantenendo gli spazi incolonnati.
+
+I Pro e i Contro:
+
+[√] Crea un <h2> con scritto "Cosa ci è piaciuto".
+
+[√] Usa una lista non ordinata (<ul>) per i punti positivi.
+
+[√] Crea un <h2> con scritto "Cosa non va".
+
+[√] Usa una lista ordinata (<ol>) per i punti negativi.
+
+[√] Tabella Riassuntiva: Crea una tabella con tre colonne: "Grafica", "Sonoro", "Giocabilità". Sotto inserisci i relativi punteggi (es. Ottimo, Buono, Eccellente).
+
+[√] Link di Acquisto: In fondo, inserisci un link (<a>) che porti a uno store online (usa Google come esempio) e che si apra in una nuova scheda del browser.
+
+Fase 2: Lo Stile (CSS Interno)
+Sperimentiamo con i bordi e le ombre per far sembrare la pagina un vero sito web:
+
+Il Box del Titolo (h1):
+
+[√] Imposta una larghezza dell'85%.
+
+[√] Centralo con margin: auto.
+
+[√] Aggiungi un bordo doppio (ricorda: puoi provare border: 5px solid black).
+
+[√] Usa text-align: center.
+
+L'Immagine di Copertina:
+
+[√] Deve essere centrata (display: block e margin: auto).
+
+[√] Aggiungi una box-shadow scura per farla "staccare" dallo sfondo.
+
+[√] Usa border-radius: 20px per arrotondare leggermente gli angoli.
+
+Personalizzazione delle Liste:
+
+[√] Per la lista dei "Pro" (ul), imposta un background-color verde chiaro.
+
+[√] Per la lista dei "Contro" (ol), imposta un background-color rossastro.
+
+[√] Usa list-style-position: inside per assicurarci che i numeri e i pallini stiano dentro il colore di sfondo.
+
+Effetto al passaggio (Hover):
+
+[√] Quando passi il mouse sopra la tabella (table:hover), cambia il colore dello sfondo di tutta la tabella.
+
+[√] Quando passi sopra i link (a:hover), aggiungi un'ombra al testo (text-shadow).
+
+Il Testo Pre-formattato (pre):
+
+[√] Cambia il font-family usando (es. 'Courier New' o 'monospace' se vuoi un effetto computer).
+
+[√] Imposta il font-weight: bold.
