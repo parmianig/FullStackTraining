@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -14,8 +15,6 @@ body {
 /* ------ HEADER ------ */
 
 /* ------ MAIN ------ */
-
-/* ------ FOOTER ------ */
 
 
 /* ------ Contenitore del menunav------ */
@@ -80,13 +79,6 @@ h1 {
     margin: auto;
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 /* ------ Dropdown ------ */
 
 .dropdown {
@@ -103,6 +95,8 @@ h1 {
     box-shadow: 0 4px 5px grey;
     z-index: 1000;
     list-style: none;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .dropdown-content li {
@@ -110,6 +104,7 @@ h1 {
 }
 
 .dropdown-content a {
+    display: block;
     color: #333;
     padding: 10px 12px;
     white-space: nowrap;
@@ -117,7 +112,6 @@ h1 {
 
 .dropdown:hover .dropdown-content {
     display: block;
-    white-space: nowrap;
 }
 
 .form-group {
@@ -135,18 +129,17 @@ h1 {
 textarea,
 input {
     width: 80%;
-    padding: auto;
+    padding: 10px 12px;
     border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-input:focus {
-    border: 2px solid goldenrod;
-    background: rgb(red, green, blue);
-}
-
+input:focus,
 textarea:focus {
-    border: 2px solid goldenrod;
-    background: rgb(red, green, blue);
+    border-color: goldenrod;
+    background: #ffffff;
+    outline: none;
 }
 
 form {
@@ -157,11 +150,6 @@ h3 {
     color: red;
     font-size: 16px;
     margin-top: 15px;
-}
-
-input:focus {
-    border: 2px solid goldenrod;
-    background: rgb(red, green, blue);
 }
 
 .form-actions {
@@ -180,7 +168,7 @@ input:focus {
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 button:hover {
@@ -228,10 +216,7 @@ button:hover {
 .servizio-card .descrizione {
     color: #0d0d0d;
     line-height: 1.5;
-}
-
-.descrizione {
-    color: #0d0d0d
+    margin: 0;
 }
 
 /* chi_siamo.htm */
@@ -262,7 +247,7 @@ button:hover {
     box-shadow: none;
 }
 
-/* footer */
+/* ------ FOOTER ------ */
 
 footer {
     position: fixed;
