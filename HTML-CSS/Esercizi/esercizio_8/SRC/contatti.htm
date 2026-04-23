@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/style.css">
-    <title>Document</title>
+    <title>Esercizio 8</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <div class="nav-container">
                 <ul class="nav-list">
                     <li><a href="./index.htm">Home</a></li>
-                    <li><a href="./contattaci.htm">Contattaci</a></li>
+                    <li><a href="./contatti.htm">Contatti</a></li>
                     <li class="dropdown">
                         <a href="./servizi.htm">Servizi</a>
                         <ul class="dropdown-content">
@@ -28,16 +28,16 @@
                             <li><a href="#">Progettazione</a></li>
                         </ul>
                     </li>
-                    <li><a href="./chi_siamo.htm">Chi siamo</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <main>
         <div class="main-container">
-            <h2>contattaci</h2>
-            <h3>Compila i campi, invia il form e ti contatteremo al più presto</h3>
+            <h1>Contatti</h1>
 
+            <form action="" method="post">
                 <div class="form-group">
                     <label for="nome">Nome*:</label>
                     <input type="text" name="nome" id="nome" required placeholder="Inserisci il tuo nome">
@@ -52,12 +52,13 @@
                 </div>
                 <div class="form-group">
                     <label for="telefono">Telefono*:</label>
-                    <input type="tel" name="telefono" id="telefono" required placeholder="Inserisci il tuo telefono">                    
+                    <input type="tel" name="telefono" id="telefono" required placeholder="Inserisci il tuo telefono">
                 </div>
 
                 <div class="form-group">
                     <label for="messaggio">Messaggio*:</label>
-                    <textarea name="messaggio" id="messaggio" cols="30" rows="10" placeholder="Scrivi il tuo messaggio..." required></textarea>
+                    <textarea name="messaggio" id="messaggio" cols="30" rows="10"
+                        placeholder="Scrivi il tuo messaggio..." required></textarea>
                 </div>
 
                 <div class="form-actions">
@@ -65,11 +66,14 @@
                     <button type="submit">Invia</button>
                 </div>
             </form>
+        </div>
     </main>
+
     <footer>
         <p>&copy; 2026 - Tutti i diritti sono riservati</p>
         <a href="mailto:esempio@test.it" target="_blank">email@example.com</a>
     </footer>
+
 </body>
 
 </html>

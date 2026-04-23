@@ -1,0 +1,242 @@
+/*ripulire tutto*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #dbb8c9;
+    background-image: linear-gradient(315deg, #357dc0 20%, #f5f7fa 90%);
+}
+
+main {
+    flex: 1;
+}
+
+/* ------ HEADER ------ */
+
+/* ------ MAIN ------ */
+
+/* ------ Contenitore del menunav ------ */
+
+.main-image {
+    text-align: center;
+}
+
+.main-image img {
+    width: 250px;
+    height: auto;
+    margin-top: 90px;
+}
+
+nav a img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: goldenrod;
+    padding: 10px;
+    width: 100%;
+    list-style-type: none;
+}
+
+.nav-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.nav-list a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-list li {
+    position: relative;
+}
+
+.main-container {
+    margin-top: 90px;
+    padding: 20px;
+    min-height: 70vh;
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ------ Dropdown ------ */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 5px grey;
+    z-index: 1000;
+    list-style: none;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content a {
+    display: block;
+    color: #333;
+    padding: 10px 12px;
+    white-space: nowrap;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/** Form  **/
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.form-group:focus-within {
+    transform: translateY(-3px);
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+textarea,
+input {
+    width: 80%;
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 3px solid #ccc;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: goldenrod;
+    background: #ffffff;
+    outline: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-actions button {
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: goldenrod;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.form-actions button:hover {
+    background-color: goldenrod;
+    transform: scale(1.1);
+}
+
+/** Servizi **/
+
+.servizi-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 0;
+}
+
+.servizio-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.servizio-card:hover {
+    background-color: #eef6ff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.servizio-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.servizio-card .descrizione {
+    color: #0d0d0d;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ------ FOOTER ------ */
+
+footer {
+    background-color: goldenrod;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    width: 100%;
+}

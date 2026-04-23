@@ -1,0 +1,28 @@
+Organizza il progetto con i seguenti file:
+
+index.html → Pagina principale 
+servizi.html → Pagina dedicata ai servizi.
+contatti.html → Pagina con il modulo di contatto.
+style.css → File per la personalizzazione grafica.
+
+2.Creazione della Navbar con Dropdown
+[√] Aggiungi un logo sulla sinistra.
+[√] Inserisci un menu di navigazione con una lista (<ul>).
+[√] Nella voce "Servizi", crea un menu a tendina (dropdown) che compare al passaggio del mouse.
+[√] Personalizza lo stile con CSS, usando position: absolute per il dropdown.
+[√] sotto la navbar inserisci un immagine nel div contenitore allineandola al centro.
+
+3.Creazione della Pagina "Servizi"
+[√] Crea un file servizi.html con la stessa navbar della home.
+[√] Aggiungi una sezione che elenca i servizi offerti con una descrizione e immagini.
+[] Personalizza il layout con CSS.
+
+4.Creazione della Pagina "Contatti" con Form
+[√] Crea un file contatti.html con la stessa navbar.
+[√] Aggiungi un form con i seguenti campi:
+[√] Nome e Cognome (input di testo)
+[√] Email (input di tipo email)
+[√] Numero di telefono (input di tipo number)
+[√] Messaggio (textarea)
+[√] Pulsante di invio
+[√] Applica CSS per lo stile del form e aggiungi un effetto al focus sugli input.
