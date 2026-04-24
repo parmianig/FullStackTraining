@@ -1,0 +1,56 @@
+[√] L'Esercizio: "Il Prezzo Scontato"
+[√] Chiedere il prezzo di un prodotto e la percentuale di sconto, 
+[√] quindi mostrare quanto l'utente risparmia e il prezzo finale.
+
+[√] // 1. Input: Chiediamo i dati
+[√] let prodotto =  ....... 
+[√] let prezzoPieno =  ......
+[√] let scontoPercentuale =  .......
+
+[√] // 2. Logica: Calcoliamo il risparmio e il prezzo finale
+[√] let risparmio = (...... * ..... ) / ......;
+[√] let prezzoFinale = prezzoPieno - risparmio;
+
+[√] // 4. Output: Mostriamo i dettagli
+[√] console.log("--- Riepilogo Carrello ---");
+[√] console.log("Prodotto: " + prodotto);
+[√] console.log("Prezzo Originale: €" + prezzoPieno);
+[√] console.log("Sconto applicato: €" + risparmio);
+
+[√] alert("Affare fatto! Per il tuo " + prodotto + " risparmierai €" + risparmio + ".\nIl prezzo finale è €" + prezzoFinale);
+
+///////////////
+
+[√] L'Esercizio: "Da Celsius a Fahrenheit"
+[√] Chiedere all'utente la temperatura in gradi Celsius (°C)
+[√] e convertirla automaticamente in Fahrenheit (°F).
+
+// 1. Input: Chiediamo la temperatura in Celsius
+[√] let .... = ....... ;
+
+// 3. Logica: Applichiamo la formula matematica
+// La formula è: (Celsius * 9/5) + 32
+[√] let fahrenheit = .............;
+
+// 4. Output: Mostriamo il risultato in console e con un alert
+[√] console.log(celsius + "°C corrispondono a " + fahrenheit + "°F");
+
+[√] alert("Risultato della conversione:\n" + celsius + "°C = " + fahrenheit + "°F");
+
+////////////////////////// 
+[√] L'Esercizio: "Il Salvadanaio Digitale"
+[√] Partire da un budget iniziale e aggiungere due "depositi" successivi,
+[√] mostrando come il totale cambia nel tempo.
+
+[√] // 1. Setup: Partiamo con dei risparmi iniziali
+[√] let saldo = prompt("Quanti soldi hai già nel salvadanaio? (es. 50)");
+saldo = Number(saldo); // Convertiamo subito in numero
+
+[√] // 2. Primo Deposito
+
+[√] // 3.Usiamo l'operatore += (aggiunge il valore al saldo)
+
+[√] // 4.Secondo Deposito
+
+// 4. Output Finale
+alert(" Operazione completata!\nIl tuo saldo totale finale è: €" + saldo.toFixed(2));

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 9</title>
+</head>
+<body>
+    
+</body>
+
+<script type="module" defer>
+    console.log("domande esercizio 9");
+    const prodotto = prompt("Inserisci il nome del prodotto");
+    const prezzo = parseFloat(prompt("Inserisci il prezzo del prodotto"));
+    const sconto = parseFloat(prompt("Inserisci la percentuale di sconto"));
+    const risparmio = prezzo * sconto / 100;
+    const prezzoFinale = prezzo - risparmio;
+    console.log("--- Riepilogo Carrello ---");
+    console.log("Prodotto: " + prodotto);
+    console.log("Prezzo Originale: €" + prezzo);
+    console.log("Sconto applicato: €" + risparmio);
+    console.log("Prezzo Finale: €" + prezzoFinale.toFixed(2));
+
+    alert("Affare fatto! Per il tuo " + prodotto + " risparmierai €" + risparmio + ".\nIl prezzo finale è €" + prezzoFinale.toFixed(2));
+
+    console.log("////////////////////////////////////////////");
+    
+    const celsius = parseFloat(prompt("Inserisci la temperatura in Celsius"));
+    const fahrenheit = (celsius * 9/5) + 32;
+    console.log(celsius + "°C corrispondono a " + fahrenheit + "°F");
+    alert("Risultato della conversione:\n" + celsius + "°C = " + fahrenheit + "°F");
+
+    console.log("////////////////////////////////////////////");
+    
+    console.log("Il Salvadanaio Digitale");
+
+    const saldoIniziale = prompt("Quanti soldi hai già nel salvadanaio? (es. 50)");
+    const deposito1 = Number(prompt("Inserisci il tuo primo deposito"));
+    var deposito2 = Number(prompt("Inserisci il tuo secondo deposito"));
+    /* JF*/
+    deposito2 += deposito1;
+    const saldoFinale = Number(saldoIniziale) + deposito2;
+    console.log("Saldo iniziale: €" + saldoIniziale);
+    console.log("Primo deposito: €" + deposito1);
+    console.log("Secondo deposito: €" + deposito2);
+    console.log("Saldo finale: €" + saldoFinale);
+    alert("Operazione completata!\nIl tuo saldo totale finale é: €" + saldoFinale.toFixed(2));
+
+    console.log("////////////////////////////////////////////");
+    
+    console.log("completato l'esercizio 9!");
+</script>
+</html>
