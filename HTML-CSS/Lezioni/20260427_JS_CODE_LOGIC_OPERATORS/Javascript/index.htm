@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <main>
+        <h1 id="titolo1">Ciao nome</h1>
+
+        <input type="text" id="dati" placeholder="Inserisci una stringa...">
+        <input type="number" id="datiN" placeholder="Inserisci una numero...">
+        <button onclick="recuperaCampo()">INVIA</button>
+
+        <h2 id="dati2">testo</h2>
+    </main>
+
+    <script>
+        // esercizio 1
+        let a = 10;
+        console.log(a);
+
+        const user=prompt("Inserisci username");
+        console.log("Ciao " + user);
+        const password=prompt("Inserisci password");
+        
+        risultato = user === "admin" && password === "1234";
+        console.log("risultato: " + risultato);
+        
+        // esercizio 2
+        const name=prompt("Inserisci nome");
+        const admin = "Admin"
+        if(name == admin) {
+            document.getElementById("titolo1").innerText = "Ciao Admin";
+        } else {
+            document.getElementById("titolo1").innerText = "Ciao " + name + " che non sei Admin";
+        }
+
+        // esercizio 3
+        function recuperaCampo() {
+            const dati = document.getElementById("dati").value;
+            const datiN = document.getElementById("datiN").value;
+
+            const number = parseInt(datiN);
+
+            console.log("dati: " + dati);
+            console.log("datiN: " + datiN);
+            document.getElementById("dati2").innerText = "La stringa: "+dati+" il numero: " + datiN;
+        }
+    </script>
+</body>
+</html>

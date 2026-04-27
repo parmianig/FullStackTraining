@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h2>Il Buttafuori Digitale</h2>
+        <form action="" method="post" enctype="multipart/form-data" onsubmit="return false" onreset="return false">
+            <p>Inserisci la tua eta</p>
+            <input type="number" id="eta" placeholder="Inserisci un'età" min="0" max="100" step="1">
+            <button onclick="checkEta()" id="invia">INVIA</button>
+        </form>
+
+        <h2>Il Suggeritore di Abbigliamento</h2>
+        <form action="" method="post" enctype="multipart/form-data" onsubmit="return false" onreset="return false">
+            <p>Inserisci la tua eta</p>
+            <input type="number" id="temperatura" placeholder="Inserisci la temperatura in °C" min="0" max="100"
+                step="1">
+        
+            <label for="clima">Clima:</label>
+            <select id="clima">
+                <option value="">Seleziona il clima</option>
+                <option value="piove">Piove</option>
+                <option value="c'è il sole">Sole</option>
+            </select>
+            <button onclick="abbigliamento()" id="invia">INVIA</button>
+        </form>
+
+        <h2>Il Calcolatore di Spedizioni</h2>
+        <form action="" method="post" enctype="multipart/form-data" onsubmit="return false" onreset="return false">
+            <p>Inserisci il peso del pacco</p>
+            <input type="number" id="peso" placeholder="Inserisci la peso in KG" min="0" max="100"
+                step="1">
+        
+            <label for="velocita">Velocità:</label>
+            <select id="velocita">
+                <option value="">Seleziona la velocità della spedizione</option>
+                <option value="standard">Standard</option>
+                <option value="espressa">Espressa</option>
+            </select>
+            <button onclick="spedizione()" id="invia">INVIA</button>
+        </form>        
+
+        <p id="risultato"></p>
+    </main>
+
+</body>
+<script src="./script.js" type="module" defer id="script" data-name="esercizio_10" data-type="esercizio"
+    data-path="Esercizi/esercizio_10/" data-title="Esercizio 10" data-description="Esercizio 10">
+
+    </script>
+
+</html>

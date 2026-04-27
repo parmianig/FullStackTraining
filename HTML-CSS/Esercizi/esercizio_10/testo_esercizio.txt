@@ -1,0 +1,42 @@
+1. Il Buttafuori Digitale (Facile)
+Verificare se l'utente può accedere a un locale in base all'età.
+
+Cosa fare: Prendi il valore da un input di tipo numero.
+
+Logica:
+
+Se l'età è minore di 18, scrivi: "Accesso negato! Sei troppo giovane."
+
+Se l'età è maggiore o uguale a 18, scrivi: "Benvenuto nel club!"
+
+**********************************************************
+2. Il Suggeritore di Abbigliamento (Avanzato)
+Consigliare cosa indossare in base alla temperatura esterna.
+
+Cosa fare: Crea un input per la temperatura e un input per il clima 
+
+Logica:
+
+Se la temperatura è sotto i 10 gradi, consiglia "Cappotto pesante".
+
+Altrimenti Se è tra 10 e 20 gradi e "Piove", consiglia "Impermeabile e ombrello".
+
+Altrimenti Se è tra 10 e 20 gradi e "C'è il sole", consiglia "Giacchetta leggera".
+
+Altrimenti se è sopra i 20 gradi, consiglia "T-shirt".
+
+*************************************************************
+Esercizio: Il Calcolatore di Spedizioni
+Obiettivo: Determinare il costo di spedizione di un pacco in base al peso e alla velocità scelta.
+
+Cosa fare: Crea un input per il peso e un campo input per la velocità di spedizione
+
+La Logica:
+
+Se il pacco pesa meno di 2kg, la spedizione costa 5€.
+
+Altrimenti Se il pacco pesa tra 2kg e 10kg e la velocità di spedizione è "Standard", la spedizione costa 10€.
+
+Altrimenti Se il pacco pesa tra 2kg e 10kg  e la velocità di spedizione è  "Espressa", costa 15€.
+
+Altrimenti se pesa oltre i 10kg costa sempre 30€ (sovrapprezzo carichi pesanti).
