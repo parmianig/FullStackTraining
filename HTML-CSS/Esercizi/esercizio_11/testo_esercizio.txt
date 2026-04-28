@@ -1,0 +1,38 @@
+Esercizio 1: Il Semaforo Digitale
+Crea un cerchio (un div con bordi arrotondati) che inizialmente è grigio. Crea tre bottoni: "Verde", "Giallo" e "Rosso". Al click di ogni bottone,
+ il cerchio deve cambiare colore nel colore corrispondente.
+
+
+ #-----------------
+
+ Esercizio 2: Il Contatore con Limite
+Crea un paragrafo che visualizza un numero (partendo da 0) e due bottoni: "+" e "-".
+
+Il tasto "+" aumenta il numero.
+
+Il tasto "-" diminuisce il numero.
+
+Extra: Se il numero è superiore a 10, il testo deve diventare rosso. Se è inferiore a 0, deve diventare blu.
+
+# -------------------
+Esercizio 3: La Modalità Notte (Dark Mode)
+Crea una pagina con un titolo, un paragrafo e un bottone con scritto "Attiva Modalità Notte".
+
+Al click, lo sfondo della pagina (body) deve diventare nero e il testo bianco.
+
+Il testo del bottone deve cambiare in "Attiva Modalità Giorno".
+
+Al secondo click, tutto deve tornare come prima.
+
+PUOI Manipolare l'intero document.body.style e usare il toggle del testo sul bottone.
+
+#---------------------
+Esercizio 4: Validatore di Input (Semplice)
+Crea un campo <input type="text"> e un bottone "Controlla".
+
+Se l'utente clicca sul bottone e l'input è vuoto, il bordo dell'input deve diventare rosso.
+
+Se l'input contiene del testo, il bordo deve diventare verde e deve apparire
+un messaggio di conferma in un paragrafo sotto.
+
+Obiettivo: Imparare a leggere la proprietà .value di un input e condizionare il CSS.

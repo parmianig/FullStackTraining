@@ -6,7 +6,7 @@ function _getCurrentWeightStatus() {
     const weightStatus = document.getElementById("weightStatus");
 
     if (!titolo || !weightStatus) {
-        console.log("titolo o weightStatus non trovato");
+        console.error("titolo o weightStatus non trovato");
         return;
     }
 
@@ -21,7 +21,7 @@ function toggleBold() {
     const titolo = document.getElementById("titolo");
 
     if (!titolo) {
-        console.log("Elemento titolo non trovato");
+        console.error("Elemento titolo non trovato");
         return;
     }
 

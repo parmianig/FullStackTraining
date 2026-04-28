@@ -1,0 +1,143 @@
+.testoDefault {
+    box-shadow: #222 2px 2px 4px;
+}
+
+.testoAlertRed {
+    border: 2px solid red;
+    box-shadow: red 2px 2px 4px;
+}
+
+.testoAlertGreen {
+    border: 2px solid green;
+    box-shadow: green 2px 2px 4px;
+}
+
+.testoDarkModeDefault {
+    color: black;
+}
+
+.testoDarkModeWhite {
+    color: white
+}
+
+.contatore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 140px;
+    padding: 15px;
+    background-color: #222;
+    border: 4px solid grey;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.mostraContatore {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.mostraContatoreRosso {
+    color: red;
+}
+
+.mostraContatoreBlu {
+    color: blue
+}
+
+.semaforo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 140px;
+    padding: 15px;
+    background-color: #222;
+    border: 4px solid #000;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.rosso,
+.giallo,
+.verde,
+.grigio {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.grigio {
+    background-color: grey;
+}
+
+.rosso {
+    background-color: red;
+}
+
+.giallo {
+    background-color: yellow;
+}
+
+.verde {
+    background-color: green;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.containerEsercizio1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerEsercizio2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerEsercizio3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: white;
+    border: 4px solid #000;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.containerEsercizio3Black {
+    background-color: black;
+}
+
+.containerEsercizio4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 15px;
+    background-color: white;
+    border: 4px solid #000;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 11</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="containerEsercizio1">
+            <h1>Il Semaforo Digitale</h1>
+            <div id="semaforo" class="semaforo">
+                <div id="luceSemaforo" class="grigio"></div>
+            </div>
+
+            <form class="buttons" action="">
+                <button id="redLight" onclick="cambiaColore('red')" type="button">Rosso</button>
+                <button id="yellowLight" onclick="cambiaColore('yellow')" type="button">Giallo</button>
+                <button id="greeLight" onclick="cambiaColore('green')" type="button">Verde</button>
+            </form>
+        </div>
+        <div class="containerEsercizio2">
+            <h1>Il Contatore con Limite</h1>
+            <div id="contatore" class="contatore">
+                <p id="mostraContatore" class="mostraContatore">0</p>
+            </div>
+
+            <form class="buttons" action="">
+                <button id="incrementa" onclick="eseguiContatore(1)" type="button">+</button>
+                <button id="riduci" onclick="eseguiContatore(-1)" type="button">-</button>
+            </form>
+        </div>
+        <div id="darkModePage" class="containerEsercizio3">
+            <h1 id="titoloDarkModeDefault" class="testoDarkModeDefault">La Modalità Notte (Dark Mode)</h1>
+            <p id="testoDarkModeDefault" class="testoDarkModeDefault">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Fuga, velit voluptas, accusamus neque earum sed
+                culpa odio deserunt exercitationem fugiat omnis, minima ipsum. Qui nostrum aut praesentium deserunt modi
+                provident.</p>
+
+            <form class="buttons" action="">
+                <button id="darkModeButton" onclick="darkMode()" type="button">Attiva Modalità Notte</button>
+            </form>
+        </div>
+        <div id="" class="containerEsercizio4">
+            <h1 class="testoDarkModeDefault">Validatore di Input (Semplice)</h1>
+
+            <form class="controller" action="">
+                <input class="testoDefault" type="text" placeholder="testo da controllare">
+                <button id="controlla" onclick="controllaTesto()" type="button">Controlla</button>
+            </form>
+            <p id="risultatoControllo"></p>
+        </div>
+    </main>
+    <script src="./js/script.js" type="module" defer>
+
+    </script>
+</body>
+
+</html>
