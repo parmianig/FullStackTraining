@@ -2,14 +2,29 @@ let titolo = document.getElementById("titolo");
 let weightStatus = document.getElementById("weightStatus");
 
 function _getCurrentWeightStatus() {
-    const curretWeight = getComputedStyle(titolo).fontWeight;
-    const textContent = curretWeight == "700" || curretWeight == "bold" ? "Bold" : "Normal";
+    const titolo = document.getElementById("titolo");
+    const weightStatus = document.getElementById("weightStatus");
 
-    weightStatus.style.fontWeight = textContent.toLowerCase(textContent);
-    weightStatus.textContent = textContent
+    if (!titolo || !weightStatus) {
+        console.log("titolo o weightStatus non trovato");
+        return;
+    }
+
+    const currentWeight = getComputedStyle(titolo).fontWeight;
+    const textContent = currentWeight == "700" || currentWeight == "bold" ? "Bold" : "Normal";
+
+    weightStatus.style.fontWeight = textContent.toLowerCase();
+    weightStatus.textContent = textContent;
 }
 
 function toggleBold() {
+    const titolo = document.getElementById("titolo");
+
+    if (!titolo) {
+        console.log("Elemento titolo non trovato");
+        return;
+    }
+
     if (titolo.style.fontWeight == "bold") {
         titolo.style.fontWeight = "normal";
     } else {
@@ -34,10 +49,10 @@ function cambiaColorePicker() {
 
 function cambiaFontSize() {
     const fontSize = document.getElementById("fontSize").value;
-        if (Number.isNaN(fontSize)) {
-            console.log("Inserisci un numero");
-            return;
-        }
+    if (Number.isNaN(fontSize)) {
+        console.log("Inserisci un numero");
+        return;
+    }
     titolo.style.fontSize = fontSize + "px";
 }
 
@@ -57,44 +72,68 @@ function _updateFontSizeInput(fontSize) {
     document.getElementById("fontSize").value = fontSize;
 }
 
-
 let paddingAttuale = 0;
-
 function _getCurrentPaddingStatus() {
-    paddingAttuale = parseInt(getComputedStyle(document.getElementById("paddingContainer")).padding);
+    const container = document.getElementById("paddingContainer");
+
+    if (!container) {
+        console.log("Elemento paddingContainer non trovato");
+        return;
+    }
+
+    paddingAttuale = parseInt(getComputedStyle(container).padding);
     _cambiaPadding(paddingAttuale);
 }
 
 function _cambiaPadding(newPaddingValue) {
-    // controlla che il valore sia un numero
     if (Number.isNaN(newPaddingValue)) {
         console.log("New padding is not a valid number");
         return;
     }
-      
-    if(newPaddingValue < 0) {
+
+    if (newPaddingValue < 0) {
         newPaddingValue = 0;
     }
-    
+
     const container = document.getElementById("paddingContainer");
-    const currentPadding = parseInt(getComputedStyle(container).padding);
+
+    if (!container) {
+        console.log("Elemento paddingContainer non trovato");
+        return;
+    }
 
     container.style.padding = newPaddingValue + "px";
     document.getElementById("paddingValue").innerText = newPaddingValue + "px";
 }
+
 
 function cambiaPadding(step) {
     const paddingAttuale = parseInt(getComputedStyle(document.getElementById("paddingContainer")).padding);
     _cambiaPadding(paddingAttuale + step);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    _getCurrentWeightStatus();
-});
+function toggleNascondi(valore, bottone) {
+    const numero = parseInt(valore);
 
-document.addEventListener("DOMContentLoaded", () => {
-    _getCurrentPaddingStatus();
-});
+    if (Number.isNaN(numero)) {
+        console.log("valore non è un numero valido");
+        return;
+    }
+    
+    if (numero < 1 || numero > 2) {
+        console.log("valore non valido");
+        return;
+    }
+
+    const paragrafo = document.getElementById("paragrafo" + parseInt(valore));
+    paragrafo.classList.toggle("hiddenText");
+
+    if (paragrafo.classList.contains("hiddenText")) {
+        bottone.textContent = "Mostra";
+    } else {
+        bottone.textContent = "Nascondi";    }
+
+}
 
 window.cambiaColore = cambiaColore;
 window.cambiaColorePicker = cambiaColorePicker;
@@ -103,3 +142,9 @@ window.cambiaFontSizeUp = cambiaFontSizeUp;
 window.cambiaFontSizeDown = cambiaFontSizeDown;
 window.toggleBold = toggleBold;
 window.cambiaPadding = cambiaPadding;
+window.toggleNascondi = toggleNascondi;
+
+document.addEventListener("DOMContentLoaded", () => {
+    _getCurrentWeightStatus();
+    _getCurrentPaddingStatus();
+});
