@@ -1,0 +1,7 @@
+.padding {
+    /* Padding uniforme su tutti i lati */
+    padding: 20px;
+    /* Rende visibile l'area di padding */
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+}
