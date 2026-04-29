@@ -1,0 +1,112 @@
+ES_1:
+1. Creiamo la nostra base (Array)
+Copia e incolla questa riga e premi Invio:
+
+JavaScript
+let supereroi = ["Spider-Man", "Batman", "Wonder Woman", "Iron Man"];
+
+2. Manipolazione 
+Ora scrivi questi comandi uno dopo l'altro per vedere come cambia l'array:
+
+Aggiungi uno nuovo alla fine:
+supereroi.push("Thor");
+
+Aggiungi uno all'inizio:
+supereroi.unshift("Hulk");
+
+Guarda il risultato:
+console.log(supereroi);
+
+#----------------------
+ES:2
+
+Crea l'array dei voti
+Iniziamo con una lista di numeri:
+
+JavaScript
+let voti = [5, 8, 4, 7, 10];
+2. Aggiungi un voto mancante
+Ti sei ricordato che manca l'ultimo compito in classe. Aggiungilo alla fine:
+
+JavaScript
+3. La Sfida: Promosso o Bocciato?
+Ora scrivi questo ciclo for. 
+Useremo un if per controllare se il voto è sufficiente (dal 6 in su) o insufficiente.
+
+JavaScript
+for (let i = 0; i < voti.length; i++) {
+    if (....) {
+        console.log("Voto " + voti[i] + ": PROMOSSO ✅");
+    } else {
+        console.log("Voto " + voti[i] + ": BOCCIATO ❌");
+    }
+}
+
+
+Immagina di voler "ripulire" la lista e lasciare solo i voti belli.
+usa il ciclo for con continue per stampare solo i voti maggiori di 5
+
+//------------------------------------------
+ES_3:
+
+In JavaScript, puoi aggiungere o togliere classi a un elemento 
+HTML per cambiargli aspetto all'istante.
+
+Immaginiamo di avere una lista di nomi e di voler colorare in modo diverso 
+chi è "online" e chi è "offline".
+
+1. Prepara l'ambiente (Copia in HTML)
+Se non lo hai già, assicurati di avere questi stili e questi elementi nel tuo file HTML:
+
+HTML
+<style>
+    .utente { padding: 10px; margin: 5px; border: 1px solid #000; }
+    .online { background-color: #2ecc71; color: white; } /* Verde */
+    .offline { background-color: #e74c3c; color: white; } /* Rosso */
+</style>
+
+<div class="box-utente">Marco</div>
+<div class="box-utente">Sara</div>
+<div class="box-utente">Luca</div>
+<div class="box-utente">Anna</div>
+
+2. Esercizio in Console
+Ora apri il tag JavaScript e crea questi comandi uno alla volta:
+
+A. Recupera tutti gli elementi con la classe "box-utente":
+
+B. Crea un array che decide chi è online e chi no:
+
+JavaScript
+let stati = ["online", "offline", "online", "offline"];
+C. Usa il ciclo FOR per applicare le classi:
+
+JavaScript
+for (let i = 0; i < utentiHTML.length; i++) {
+    // Prendiamo lo stato dall'array (online o offline)
+    let statoAttuale = stati[i]; 
+    
+    // Aggiungiamo la classe corrispondente all'elemento HTML
+    utentiHTML[i].classList.add(statoAttuale);
+}
+
+Prova a scrivere questo in console per modificare l'ultimo utente (Anna):
+
+Rimuovi la classe: Usa utentiHTML[3].classList.remove("offline");
+
+Aggiungi la classe: Usa utentiHTML[3].classList.add("online");
+
+Cambia il testo: Usa utentiHTML[3].innerText = "Anna (Appena entrata!)";
+
+Il trucco magico: toggle
+Esiste un comando chiamato classList.toggle("nomeClasse").
+
+Se la classe c'è, la toglie.
+
+Se la classe non c'è, la mette.
+
+Prova a scrivere questo:
+utentiHTML[0].classList.toggle("offline");
+
+
+
