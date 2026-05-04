@@ -1,0 +1,121 @@
+Creeremo uno Slider di Immagini interattivo. 
+Useremo classList per gestire quale foto è visibile, 
+un timer per l'automazione e il forEach per inizializzare i controlli.
+
+Ecco il codice completo e commentato. 
+Puoi salvarlo come slider.html.
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Professionale JS</title>
+    <style>
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background: #222; }
+
+        .slider-container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            overflow: hidden; /* Nasconde le foto non attive */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0; /* Foto nascosta di base */
+            transition: opacity 0.8s ease-in-out, transform 1s ease;
+            transform: scale(1.1);
+        }
+
+        /* La classe magica che attiva la foto */
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Pulsanti */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.3);
+            border: none;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            z-index: 10;
+        }
+        .nav-btn:hover { background: rgba(255,255,255,0.5); }
+        .next { right: 0; border-radius: 10px 0 0 10px; }
+        .prev { left: 0; border-radius: 0 10px 10px 0; }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slide active">
+            <img src="https://picsum.photos/id/10/600/400" alt="Natura">
+        </div>
+        <div class="slide">
+            <img src="https://picsum.photos/id/20/600/400" alt="Città">
+        </div>
+        <div class="slide">
+            <img src="https://picsum.photos/id/30/600/400" alt="Montagna">
+        </div>
+
+        <button class="nav-btn prev">❮</button>
+        <button class="nav-btn next">❯</button>
+    </div>
+
+    <script>
+        // 1. Selezione degli elementi
+        const slides = document.querySelectorAll('.slide');
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+        
+        let indiceCorrente = 0;
+
+        // 2. Funzione cuore: cambia la classe 'active'
+        const mostraSlide = (indice) => {
+            // Rimuoviamo la classe active da TUTTE le slide usando forEach
+            slides.forEach(slide => slide.classList.remove('active'));
+            
+            // Aggiungiamo la classe solo a quella desiderata
+            slides[indice].classList.add('active');
+        };
+
+        // 3. Gestore evento Click - Prossima foto
+        nextBtn.addEventListener('click', () => {
+            indiceCorrente++;
+            // Se supero l'ultima foto, ricomincio dalla prima (0)
+            if (indiceCorrente >= slides.length) {
+                indiceCorrente = 0;
+            }
+            mostraSlide(indiceCorrente);
+        });
+
+        // 4. Gestore evento Click - Foto precedente
+        prevBtn.addEventListener('click', () => {
+            indiceCorrente--;
+            // Se vado sotto lo zero, vado all'ultima foto
+            if (indiceCorrente < 0) {
+                indiceCorrente = slides.length - 1;
+            }
+            mostraSlide(indiceCorrente);
+        });
+
+        // 5. Automazione: Cambia foto ogni 5 secondi
+        setInterval(() => {
+            nextBtn.click(); // Simula un click sul tasto "next"
+        }, 5000);
+
+    </script>
+</body>
+</html>

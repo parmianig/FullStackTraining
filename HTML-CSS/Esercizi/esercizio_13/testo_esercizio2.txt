@@ -1,0 +1,79 @@
+ES 1: Il Cambia-Sfondo (Facile)
+Crea un bottone che, ogni volta che viene cliccato, 
+cambia il colore dello sfondo della pagina (document.body) 
+tra due colori a tua scelta.
+
+Cosa usare: querySelector, addEventListener('click', ...) e classList.toggle.
+
+Suggerimento: Definisci una classe .bg-color nel tuo CSS con un colore diverso.
+
+ES 2: L'Inseguitore Silenzioso (Intermedio)
+Obiettivo: Crea un piccolo cerchio (un div tondo)
+ che segue esattamente la posizione del mouse quando lo muovi all'interno della pagina.
+
+Cosa usare: L'evento 'mousemove'.
+
+Il trucco da Pro: Ricordi l'oggetto event? All'interno della funzione 
+potrai usare event.clientX e event.clientY per sapere dove si trova 
+il mouse e assegnare quei valori a cerchio.style.left e cerchio.style.top.
+
+Nota: Ricordati di impostare position: absolute o fixed nel CSS per il cerchio.
+
+ES 3: Il Validatore "Live" (Avanzato)
+Obiettivo: Crea un campo di testo (<input>). 
+Mentre l'utente scrive, se la parola inserita è più corta di 5 caratteri,
+il bordo dell'input deve essere rosso. Se è 5 o più, deve diventare verde.
+
+Cosa usare: L'evento 'input'.
+
+Logica: Dentro la funzione, controlla input.value.length.
+Usa classList.add e classList.remove per cambiare i colori.
+
+//--------------------- Soluzioni per JS
+
+ ES_1:
+usiamo il toggle. 
+È il modo più rapido per gestire stati "Acceso/Spento".
+
+const btn = document.querySelector('#cambiaColore');
+
+btn.addEventListener('click', () => {
+    // Aggiunge o toglie la classe 'dark-mode' al body
+    document.body.classList.toggle('dark-mode');
+});
+
+
+ES_2:
+usa l'oggetto event per "leggere" le coordinate del mouse in tempo reale.
+
+const cerchio = document.querySelector('#cursore');
+
+document.addEventListener('mousemove', (event) => {
+    // Leggo la posizione X e Y del mouse
+    const x = event.clientX;
+    const y = event.clientY;
+    
+    // Sposto il cerchio (sottraendo metà larghezza per centrarlo)
+    cerchio.style.left = `${x - 25}px`;
+    cerchio.style.top = `${y - 25}px`;
+});
+
+ES_3:
+usiamo l'evento 'input', che è molto più reattivo di 'change', 
+perché scatta a ogni singola lettera digitata.
+
+const inputTesto = document.querySelector('#username');
+
+inputTesto.addEventListener('input', () => {
+    const lunghezza = inputTesto.value.length;
+
+    if (lunghezza >= 5) {
+        // Se è lungo abbastanza, aggiungo classe verde e tolgo rossa
+        inputTesto.classList.add('valido');
+        inputTesto.classList.remove('non-valido');
+    } else {
+        // Altrimenti faccio il contrario
+        inputTesto.classList.add('non-valido');
+        inputTesto.classList.remove('valido');
+    }
+});
