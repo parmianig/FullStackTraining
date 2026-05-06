@@ -1,0 +1,23 @@
+Esercizio:  "Smart Gym"
+Crea una pagina register.php che raccolga i dati di un nuovo socio.
+I dati devono essere validati e salvati in sessione. 
+Se tutto è corretto, l'utente deve essere reindirizzato a home.php.
+
+1. Campi richiesti nel Form:
+Nome (Testo)
+
+Congnome (Testo)
+
+Data di Nascita (Data - input type="date")
+
+Eta (Numero - input type="number")
+
+Abbonamento (Select: "Mensile", "Trimestrale", "Annuale")
+
+Peso (kg) (Numero - input type="number")
+
+2. pagina home.php
+stampa i dati inseriti, impostando la scritta arancione per l'abbonamento è 
+trimestrale, verde per Annuale
+
+
