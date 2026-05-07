@@ -59,6 +59,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             'loggato' => true
         ];
 
+        // evitare di ricaricare i dati nel form ad ogni refresh della pagina
         header('Location: home.php');
         exit();
     } else {
