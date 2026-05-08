@@ -1,0 +1,213 @@
+L'Esercizio: Il Sistema di Prenotazione Palestra
+Immagina di dover creare una pagina per calcolare il costo dell'abbonamento mensile a una palestra.
+
+Requisiti:
+File functions.php: Crea una funzione che:
+
+Riceva il nome dell'abbonamento (Base: €30, Premium: €50).
+
+Riceva il numero di mesi.
+
+Applichi uno sconto del 15% se l'utente prenota per più di 6 mesi.
+
+Restituisca il totale formattato.
+
+File index.php:
+
+Un form HTML dove l'utente sceglie il tipo di abbonamento (usando un <select>) e inserisce il numero di mesi.
+
+Al click sul tasto "Calcola Prezzo", mostra il risultato in un box colorato.
+
+Il file principale (index.php)
+
+<?php 
+require_once 'functions.php'; 
+
+$risultato = "";
+
+// inserisci i controlli
+
+?>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Palestra Online</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #eee; }
+        .box { background: white; padding: 20px; border-radius: 8px; max-width: 400px; margin: auto; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .alert { margin-top: 20px; padding: 10px; background: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 4px; }
+        select, input, button { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background: #28a745; color: white; border: none; cursor: pointer; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Preventivo Palestra</h2>
+    <form method="POST">
+        <label>Scegli il piano:</label>
+        <select name="piano">
+            <option value="base">Base (€30/mese)</option>
+            <option value="premium">Premium (€50/mese)</option>
+        </select>
+
+        <label>Numero di mesi:</label>
+        <input type="number" name="mesi" min="1" required>
+
+        <button type="submit">Calcola Prezzo</button>
+    </form>
+
+    <?php if ($risultato): ?>
+        <div class="alert"><?php echo $risultato; ?></div>
+    <?php endif; ?>
+</div>
+
+</body>
+</html>
+
+//-----------------------------------------
+
+
+Esercizio: Calcolatore di Voti Scolastici.
+
+crea una funzione che prenda un punteggio (da 0 a 100) 
+e ci dica se lo studente è promosso o bocciato, cambiando anche il colore del risultato.
+
+1. Il file delle funzioni (scuola_utility.php)
+Qui creiamo una funzione che decide l'esito e una che decide il colore CSS da usare.
+
+2. Il file principale (voti.php)
+In questo file mettiamo un piccolo form e mostriamo il risultato in modo colorato.
+
+PHP
+<?php
+require_once 'scuola_utility.php';
+
+$messaggio = "";
+$colore = "black";
+
+// inserisci i controlli
+?>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Valutazione Esami</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 50px; }
+        .box { border: 2px solid #ccc; display: inline-block; padding: 20px; border-radius: 10px; }
+        .risultato { font-size: 1.5rem; font-weight: bold; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Inserisci il tuo punteggio</h2>
+    <form method="POST">
+        <input type="number" name="voto" min="0" max="100" required placeholder="Es. 75">
+        <button type="submit">Controlla</button>
+    </form>
+
+    <?php if ($messaggio): ?>
+        <div class="risultato" style="color: <?php echo $colore; ?>;">
+            <?php echo $messaggio; ?>
+        </div>
+    <?php endif; ?>
+</div>
+
+</body>
+</html>
+
+//-----------------------------------------
+
+L'Esercizio: Il Cambio Valuta del Viaggiatore
+
+Funzione di Conversione: Deve ricevere un importo, la valuta di destinazione (USD o GBP) e una percentuale di commissione fissa del 2%.
+    // Tassi di cambio fissi (Esempio)
+    $tassi = [
+        "USD" => 1.08,
+        "GBP" => 0.85
+    ];
+
+Validazione: Deve impedire la conversione se l'importo è zero o negativo.
+
+Visualizzazione: Se il cambio va a buon fine, deve mostrare un riepilogo con: importo originale, commissione trattenuta e totale ricevuto.
+
+creazione dei files: 
+
+1. Il file delle funzioni (cambio_utility.php)
+crea solo le funzioni
+
+2. Il file principale (cambio.php)
+Qui gestiamo il form 
+
+<?php
+require_once 'cambio_utility.php';
+
+$datiCambio = null;
+$errore = "";
+
+// inserisci i controlli
+
+?>
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Global Exchange</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #eceff1; padding: 40px; }
+        .card { background: white; max-width: 450px; margin: auto; border-radius: 15px; overflow: hidden; box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
+        .header { background: #263238; color: white; padding: 20px; text-align: center; }
+        .content { padding: 30px; }
+        .res-box { background: #f1f8e9; border: 1px dashed #8bc34a; padding: 15px; margin-top: 20px; }
+        .err-box { color: #d32f2f; background: #ffebee; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+        input, select, button { width: 100%; padding: 12px; margin: 10px 0; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; }
+        button { background: #ff9800; color: white; border: none; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="header">
+        <h2>Global Currency Exchange</h2>
+    </div>
+    
+    <div class="content">
+        <?php if ($errore): ?>
+            <div class="err-box"><?php echo $errore; ?></div>
+        <?php endif; ?>
+
+        <form method="POST">
+            <label>Importo in Euro (€):</label>
+            <input type="number" name="quantita" step="0.01" required placeholder="0.00">
+
+            <label>Cambia in:</label>
+            <select name="moneta">
+                <option value="USD">Dollaro Americano (USD)</option>
+                <option value="GBP">Sterlina Britannica (GBP)</option>
+            </select>
+
+            <button type="submit">Converti Ora</button>
+        </form>
+
+        <?php if ($datiCambio): ?>
+            <div class="res-box">
+                <h4>Riepilogo Operazione:</h4>
+                <p>Versato: €<?php echo number_format($datiCambio['originale'], 2); ?></p>
+                <p>Commissione (2%): €<?php echo number_format($datiCambio['commissione'], 2); ?></p>
+                <hr>
+                <h3>Ricevi: <?php echo $datiCambio['simbolo'] . " " . number_format($datiCambio['finale'], 2); ?></h3>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>
+
+</body>
+</html>
+
+

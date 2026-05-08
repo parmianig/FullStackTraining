@@ -1,0 +1,68 @@
+Esercizio 1: Gestione Inventario (Aggiunta e Modifica)
+Crea un array associativo chiamato $prodotto con le chiavi: 
+nome, categoria, quantita e prezzo.
+
+Stampa una frase che indichi il nome del prodotto e la sua quantità disponibile.
+
+Aggiorna la quantita sommandone 10 (simulando un nuovo arrivo in magazzino).
+
+Aggiungi una nuova chiave sconto con valore 15.
+
+Stampa l'array aggiornato usando un ciclo foreach rendendo la prima lettera 
+delle chiavi maiuscola (usa ucfirst).
+
+Esercizio 2: Controllo e Pulizia Dati (Funzioni di verifica)
+Partendo dall'array dello smartphone del tuo esempio:
+
+$smartphone = [
+    'marca' => 'Apple',
+    'modello' => 'Iphone 15',
+    'prezzo' => 899,
+    'disponibile' => true
+];
+
+Verifica se esiste la chiave colore usando isset(). 
+Se non esiste, aggiungila con valore "Nero".
+usa if(isset()){
+    .....
+}else{
+    .....
+}
+
+Verifica se esiste la chiave prezzo usando array_key_exists().
+Se esiste, eliminala usando unset().
+usa if(array_key_exists()){
+
+    .........
+}elese{
+
+    .........
+}
+
+
+Stampa solo i nomi di tutte le chiavi rimaste nell'array.
+
+Esercizio 3: Ordinamento e Posizionamento (Top List)
+Hai un array di punteggi di un videogioco:
+
+PHP
+$punteggi = [
+    "Mario" => 1500,
+    "Luigi" => 1200,
+    "Peach" => 1800
+];
+Ordina l'array in base ai punteggi (valori) dal più basso al più alto mantenendo 
+le chiavi (asort).
+
+Inserisci un nuovo giocatore "Bowser" con punteggio 2000 
+nella prima posizione dell'array (usa array_merge).
+
+Elimina l'ultimo giocatore della lista aggiornata.
+
+Stampa la lista finale.
+
+Esercizio 4: La Concessionaria (Array Multidimensionale)
+Crea una matrice $concessionaria che contenga 3 array associativi, 
+ognuno con marca, modello e anno.
+
+Stampa il modello della terza auto nella lista.
