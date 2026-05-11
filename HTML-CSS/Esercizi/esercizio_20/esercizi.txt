@@ -1,0 +1,48 @@
+1. Apri MySQL e dalla schada SQL crea il DB:
+
+CREA un contenitore chiamato spesa.
+
+2. Struttura della Tabella (Lo Schema)
+Dopo aver creato il DB dalla scheda SQL chiama il DB appena creato e aggiungi 
+la struttura della tabella.
+
+USA il DB spesa.
+
+Immagina di disegnare le colonne di un foglio Excel. 
+Devi definire il nome della colonna e il tipo di dato che conterrà.
+
+CREA TABELLA chiamata prodotti con queste colonne:
+
+id: Numero intero, si genera da solo, Chiave Primaria.
+
+Nome: Testo max 100 caratteri (obbligatorio).
+
+Categoria: Testo max 100 caratteri.
+
+Quantità: Numero intero (se non specificato, metti 1).
+
+Prezzo: Numero con decimali.
+
+3. Manipolazione dei Dati
+Una volta creata la struttura, puoi iniziare a inserire o leggere le informazioni.
+
+PER INSERIRE (inserisci  5 prodotti):
+INSERISCI DENTRO prodotti (nelle colonne Nome, Categoria, Quantità, Prezzo)
+I VALORI ("Mele", "Alimentari", 5, 2.50).
+
+PER LEGGERE:
+MOSTRA TUTTO dalla tabella prodotti.
+
+PER FILTRARE:
+MOSTRA TUTTO dalla tabella prodotti DOVE la categoria è uguale a "Alimentari".
+
+4.Aggiungi le colonne mancanti:
+Posizionamento: Di default, il database mette la nuova colonna alla fine.
+Se la vuoi in un punto preciso (ad esempio subito dopo il nome), 
+
+MODIFICA prodotti AGGIUNGI scadenza (tipo data) DOPO la colonna nome.
+
+Valori predefiniti: Se vuoi che la colonna non sia vuota per 
+i prodotti già esistenti:
+
+MODIFICA prodotti AGGIUNGI nota (tipo testo) CON VALORE PREDEFINITO "Nessuna nota".
