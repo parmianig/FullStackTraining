@@ -1,0 +1,45 @@
+La Traccia: "Il Sistema di Prenotazione Hotel"
+Devi creare una classe chiamata Prenotazione. 
+Questa classe deve gestire i dati di una camera d'albergo, 
+ma deve essere "severa": non deve permettere dati illogici (come un numero di persone negativo o una data passata).
+
+Requisiti della classe:
+Proprietà Private:
+
+cliente (stringa)
+
+numeroNotti (intero)
+
+codiceSconto (stringa)
+
+Regole di validazione (da inserire nei Setter):
+
+Il cliente non può essere una stringa vuota.
+
+Il numeroNotti deve essere almeno 1. Se è 0 o meno, solleva un errore.
+
+Il codiceSconto deve avere un formato fisso: deve iniziare con la parola "SCONTO" (es: "SCONTO10"). Se non è così, solleva un errore.
+
+Indicazioni su come impostarla
+Ecco la "mappa" che devi seguire per scrivere il codice. 
+
+1. Struttura della Classe
+Dichiara le proprietà come private.
+
+Crea un costruttore che accetti i tre parametri. Attenzione: dentro il costruttore non assegnare i valori direttamente (es. $this->cliente = $cliente), ma chiama i rispettivi metodi Setter (es. $this->setCliente($cliente)). Questo assicura che i controlli scattino anche alla creazione dell'oggetto.
+
+2. Logica dei Setter
+Usa la parola chiave throw new Exception("Messaggio d'errore") dentro un blocco if per bloccare i dati sbagliati.
+
+Per il codice sconto, usa la funzione PHP str_starts_with($stringa, "SCONTO") per verificare l'inizio della parola.
+
+3. Gestione nel file principale (index.php)
+Crea un piccolo form HTML con i campi: Nome Cliente, Numero Notti e Codice Sconto.
+
+Quando ricevi i dati via $_POST, apri un blocco try.
+
+Dentro il try, istanza l'oggetto Prenotazione.
+
+Subito dopo, aggiungi il blocco catch (Exception $e).
+
+Dentro il catch, usa $e->getMessage() per stampare a video l'errore in un box rosso.
