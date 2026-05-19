@@ -1,0 +1,89 @@
+// ============================================================
+//  PSEUDOCODICE
+// ============================================================
+
+CLASSE Libro
+
+    ATTRIBUTI
+        privato  : titolo
+        privato  : autore
+        protetto : disponibile  ← true/false
+        protetto : nomePrestito ← chi ha il libro
+
+    COSTRUTTORE(titolo, autore)
+
+        imposta titolo, autore
+        disponibile = vero
+        nomePrestito = vuoto
+
+    METODO pubblico getTitolo()     → restituisce titolo
+    METODO pubblico getAutore()     → restituisce autore
+    METODO pubblico isDisponibile() → restituisce disponibile
+
+    METODO pubblico stampaInfo()
+        stampa titolo, autore, stato (disponibile / in prestito a chi)
+
+// ------------------------------------------------------------
+
+CLASSE LibroPrestabile  ESTENDE  Libro
+    ATTRIBUTI
+        privato : storicoPrestiti[]  ← lista di chi ha preso il libro
+
+    METODO pubblico prendi(nomeUtente)
+        SE non disponibile
+            stampa "già in prestito"
+            ESCI
+            
+        disponibile  = falso
+        nomePrestito = nomeUtente
+        aggiungi nomeUtente a storicoPrestiti[]
+        stampa "prestito OK"
+
+    METODO pubblico restituisci()
+        SE disponibile
+            stampa "il libro non era in prestito"
+            ESCI
+        disponibile  = vero
+        nomePrestito = vuoto
+        stampa "restituzione OK"
+
+    METODO pubblico mostraStorico()
+        stampa tutta la lista storicoPrestiti[]
+
+// ------------------------------------------------------------
+
+MAIN
+    crea libro1 = LibroPrestabile("Il nome della rosa", "Eco")
+    crea libro2 = LibroPrestabile("1984", "Orwell")
+
+    libro1 → stampaInfo()
+    libro1 → prendi("Marco")
+    libro1 → prendi("Luca")     ← deve essere negato
+    libro1 → stampaInfo()
+    libro1 → restituisci()
+    libro1 → prendi("Luca")     ← ora funziona
+    libro1 → mostraStorico()
+
+    libro2 → prendi("Anna")
+    libro2 → restituisci()
+    libro2 → stampaInfo()
+
+
+#------------------------ RISULTATO ATTESO ------------------------- 
+--- Stato iniziale ---
+[Il nome della rosa] di Umberto Eco → disponibile
+[1984] di George Orwell → disponibile
+
+--- Prestiti libro1 ---
+Marco ha preso in prestito "Il nome della rosa".
+"Il nome della rosa" è già in prestito a Marco.
+[Il nome della rosa] di Umberto Eco → in prestito a: Marco
+Marco ha restituito "Il nome della rosa".
+Luca ha preso in prestito "Il nome della rosa".
+Storico prestiti di "Il nome della rosa": Marco, Luca
+
+--- Prestiti libro2 ---
+Anna ha preso in prestito "1984".
+Anna ha restituito "1984".
+[1984] di George Orwell → disponibile
+Storico prestiti di "1984": Anna

@@ -1,0 +1,18 @@
+i concetti chiave che vengono applicati:
+Visibilità delle proprietà
+
+private $numeroConto — solo ContoBase può leggerlo/modificarlo. Nemmeno le classi figlie ci accedono direttamente.
+protected $saldo e $intestatario — le classi figlie (ContoCorrente, ContoRisparmio) possono usarli direttamente, ma il codice esterno no.
+public per i metodi — getSaldo(), stampaInfo(), ecc. sono accessibili da chiunque.
+
+Ereditarietà
+
+Entrambe le figlie usano extends ContoBase e chiamano parent::__construct() per inizializzare le proprietà ereditate.
+stampaInfo() è definito una volta sola in ContoBase ma funziona su entrambe le figlie — questo è il riuso del codice tramite ereditarietà.
+registraOperazione() è protected: le figlie la chiamano ma nessuno esterno può farlo.
+
+Sfide per esercitarsi ulteriormente
+
+Aggiungere una classe ContoAziendale che estende ContoCorrente e aggiunge una proprietà private $ragioneSociale.
+Trasformare ContoBase in una classe abstract con un metodo astratto preleva().
+Aggiungere un'interfaccia Trasferibile con il metodo trasferisci(ContoBase $destinazione, float $importo).
